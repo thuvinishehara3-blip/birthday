@@ -1,0 +1,200 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-display: 'Playfair Display', Georgia, serif;
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #fff5fa;
+    color: #36132b;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: var(--font-display);
+  }
+}
+
+@keyframes gradientShift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes orbDrift {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  33% {
+    transform: translate3d(24px, -18px, 0) scale(1.06);
+  }
+  66% {
+    transform: translate3d(-18px, 16px, 0) scale(0.96);
+  }
+}
+
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate3d(0, -14px, 0) rotate(4deg);
+  }
+}
+
+@keyframes floatHeartUp {
+  0% {
+    transform: translate3d(0, 24px, 0) scale(0.75);
+    opacity: 0;
+  }
+  18% {
+    opacity: 0.88;
+  }
+  80% {
+    opacity: 0.65;
+  }
+  100% {
+    transform: translate3d(0, -210px, 0) scale(1.16);
+    opacity: 0;
+  }
+}
+
+@keyframes characterBounce {
+  0%, 100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, -8px, 0);
+  }
+}
+
+@keyframes characterWave {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-16deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  75% {
+    transform: rotate(-12deg);
+  }
+}
+
+@keyframes eyeBlink {
+  0%, 44%, 48%, 100% {
+    transform: scaleY(1);
+  }
+  46% {
+    transform: scaleY(0.1);
+  }
+}
+
+@keyframes sparkleTwinkle {
+  0%, 100% {
+    transform: scale(0.75) rotate(0deg);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.25) rotate(24deg);
+    opacity: 1;
+  }
+}
+
+@keyframes candleFlicker {
+  0%, 100% {
+    transform: scale(1) rotate(-2deg);
+    opacity: 0.96;
+  }
+  33% {
+    transform: scale(1.08, 0.95) rotate(2deg);
+    opacity: 1;
+  }
+  66% {
+    transform: scale(0.95, 1.08) rotate(-1deg);
+    opacity: 0.92;
+  }
+}
+
+@keyframes gentleShake {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-8px); }
+  40% { transform: translateX(8px); }
+  60% { transform: translateX(-6px); }
+  80% { transform: translateX(6px); }
+}
+
+.bg-wonderland-gradient {
+  background: linear-gradient(
+    135deg,
+    #ffe6f3 0%,
+    #f5e4ff 26%,
+    #ffeadd 52%,
+    #e5f3ff 76%,
+    #fff7d6 100%
+  );
+  background-size: 260% 260%;
+  animation: gradientShift 16s ease-in-out infinite;
+}
+
+.animate-orb-drift {
+  animation: orbDrift 14s ease-in-out infinite;
+}
+
+.animate-float-slow {
+  animation: floatSlow 5.2s ease-in-out infinite;
+}
+
+.animate-float-heart {
+  animation: floatHeartUp 7s ease-in-out infinite;
+}
+
+.animate-char-bounce {
+  animation: characterBounce 3s ease-in-out infinite;
+}
+
+.animate-char-bounce-delayed {
+  animation: characterBounce 3.2s ease-in-out 0.45s infinite;
+}
+
+.animate-char-wave {
+  transform-box: fill-box;
+  transform-origin: 85% 85%;
+  animation: characterWave 2.4s ease-in-out infinite;
+}
+
+.animate-eye-blink {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: eyeBlink 4.6s ease-in-out infinite;
+}
+
+.animate-sparkle {
+  animation: sparkleTwinkle 2.8s ease-in-out infinite;
+}
+
+.animate-candle-flame {
+  transform-box: fill-box;
+  transform-origin: center bottom;
+  animation: candleFlicker 1.3s ease-in-out infinite;
+}
+
+.animate-gentle-shake {
+  animation: gentleShake 0.42s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

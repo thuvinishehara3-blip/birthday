@@ -1,0 +1,6 @@
+{
+  "name": "Happy Birthday Sudu Nona",
+  "description": "A romantic interactive 29th birthday surprise crafted especially for Sudu Nona.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
