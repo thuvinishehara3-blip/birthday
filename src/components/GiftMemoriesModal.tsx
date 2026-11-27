@@ -30,7 +30,7 @@ interface MemoryPhoto {
 const MEMORIES: MemoryPhoto[] = [
   {
     id: 1,
-    src: '/assets/aistudio/WhatsApp_Image_2026-11-20_at_00.39.42_71b0a04d.jpeg',
+    src: `${import.meta.env.BASE_URL}assets/aistudio/WhatsApp_Image_2026-11-20_at_00.39.42_71b0a04d.jpeg`,
     alt: 'The couple together at their graduation ceremony holding red convocation scrolls',
     title: '01 · Together at Our Graduation',
     caption:
@@ -47,7 +47,7 @@ const MEMORIES: MemoryPhoto[] = [
   },
   {
     id: 2,
-    src: '/assets/aistudio/WhatsApp_Image_2026-11-20_at_00.39.43__1__37dfdcee.jpeg',
+    src: `${import.meta.env.BASE_URL}assets/aistudio/WhatsApp_Image_2026-11-20_at_00.39.43__1__37dfdcee.jpeg`,
     alt: 'Sudu Nona holding a bouquet of flowers in her white saree and graduation gown',
     title: '02 · You & Your Flowers',
     caption:
@@ -64,7 +64,7 @@ const MEMORIES: MemoryPhoto[] = [
   },
   {
     id: 3,
-    src: '/assets/aistudio/WhatsApp_Image_2026-11-20_at_00.39.43_676c2d59.jpeg',
+    src: `${import.meta.env.BASE_URL}assets/aistudio/WhatsApp_Image_2026-11-20_at_00.39.43_676c2d59.jpeg`,
     alt: 'The couple standing together outdoors in their graduation gowns',
     title: '03 · Outdoors in Our Gowns',
     caption:
@@ -81,7 +81,7 @@ const MEMORIES: MemoryPhoto[] = [
   },
   {
     id: 4,
-    src: '/assets/aistudio/WhatsApp_Image_2026-11-20_at_00.39.44_7ef964c3.jpeg',
+    src: `${import.meta.env.BASE_URL}assets/aistudio/WhatsApp_Image_2026-11-20_at_00.39.44_7ef964c3.jpeg`,
     alt: 'The couple walking together holding hands on a red carpet',
     title: '04 · Walking the Red Carpet',
     caption:

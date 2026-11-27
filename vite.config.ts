@@ -4,8 +4,15 @@ import fs from 'fs';
 import path from 'path';
 import {defineConfig} from 'vite';
 
-export default defineConfig(() => {
+export default defineConfig(({command}) => {
+  const rawBase = process.env.VITE_BASE_PATH;
+  const normalizedEnvBase = rawBase
+    ? `${rawBase.replace(/\/+$/, '')}/`
+    : undefined;
+  const base = normalizedEnvBase || (command === 'build' ? './' : '/');
+
   return {
+    base,
     plugins: [
       react(),
       tailwindcss(),
